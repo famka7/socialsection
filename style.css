@@ -1,0 +1,228 @@
+* {
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
+  /* overflow: hidden; */
+  --color-p-dark-magenta: hsl(300, 43%, 22%);
+  --color-p-soft-pink: hsl(333, 80%, 67%);
+  --color-n-d-grayish-magenta: hsl(303, 10%, 53%);
+  --color-n-l-grayish-magenta: hsl(300, 24%, 96%);
+  --color-n-white: hsl(0, 0%, 100%);
+  font-family: "Spartan", sans-serif;
+  text-align: center;
+}
+/*Very Dark Magenta: hsl(300, 43%, 22%)
+Soft Pink: hsl(333, 80%, 67%)
+
+### Neutral
+
+Dark Grayish Magenta: hsl(303, 10%, 53%)
+Light Grayish Magenta: hsl(300, 24%, 96%)
+White: hsl(0, 0%, 100%)*/
+body {
+  background-color: var(--color-n-white);
+  overflow-x: hidden;
+}
+.desktop {
+  display: none;
+}
+.mobile {
+  position: absolute;
+  z-index: -1;
+}
+.topm {
+  top: 0;
+  left: 0;
+}
+.bottomm {
+  bottom: 0;
+}
+header {
+  color: var(--color-p-dark-magenta);
+  font-weight: 700;
+  margin: 0 auto;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+  width: 90%;
+}
+header > h2 {
+  font-size: 2rem;
+  width: 75%;
+  margin: 10px auto;
+}
+.pheader {
+  color: var(--color-n-d-grayish-magenta);
+  font-weight: 400;
+}
+.card {
+  background-color: var(--color-n-l-grayish-magenta);
+  width: 90%;
+  margin: 0.5rem auto;
+  padding: 1.2rem 0.2rem;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  color: var(--color-p-dark-magenta);
+  font-weight: 700;
+}
+.card > img {
+  margin-left: 0.3rem;
+}
+.card > img:first-child {
+  margin-left: 0;
+}
+.card > p {
+  padding-top: 0.8rem;
+}
+.reviws {
+  padding: 2rem 0;
+}
+.card-r {
+  width: 90%;
+  margin: 0.3rem auto;
+  background-color: var(--color-p-dark-magenta);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 0.3rem 0.4rem;
+  border-radius: 0.6rem;
+  -webkit-border-radius: 0.6rem;
+  -moz-border-radius: 0.6rem;
+  -ms-border-radius: 0.6rem;
+  -o-border-radius: 0.6rem;
+  margin-bottom: 0.7rem;
+}
+.card-r:last-child {
+  margin-bottom: 0;
+}
+.up {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 0.7rem;
+  margin-bottom: 0.5rem;
+}
+.card-r > .up > img {
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+.card-r > .up > .info {
+  margin-left: 0.8rem;
+  line-height: 1.6;
+  color: var(--color-n-white);
+}
+.card-r > .up > .info > .title {
+  color: var(--color-p-soft-pink);
+  font-weight: 400;
+}
+.card-r > p {
+  text-align: left;
+  line-height: 1.4;
+  padding: 1.3rem;
+  color: var(--color-n-white);
+  font-weight: 500;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  display: none;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+@media only screen and (min-width: 400px) {
+  .mobile {
+    display: none;
+  }
+  .desktop {
+    display: block;
+    z-index: -1;
+    position: absolute;
+  }
+  .topd {
+    top: -80px;
+    left: 0;
+  }
+  .bottomd {
+    bottom: 0;
+  }
+  .con {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 1rem auto 0;
+  }
+  header {
+    width: 38%;
+    margin: 5rem 0 3rem;
+    text-align: left;
+  }
+  header > h2 {
+    text-align: inherit;
+    font-size: 2.4rem;
+    margin-left: 0;
+  }
+  header > p {
+    text-align: inherit;
+    margin-left: 3.5rem;
+    margin-left: 0;
+    line-height: 1.6;
+  }
+  .cards {
+    width: 50%;
+    margin-top: 6.5rem;
+  }
+  .card {
+    width: 65%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-right: 4rem;
+    margin-bottom: 0.8rem;
+  }
+  .card > p {
+    padding-top: 0;
+  }
+  .card:first-child {
+    margin-left: 1.3rem;
+  }
+  .card:last-child {
+    margin-left: 10rem;
+    margin-bottom: 0;
+  }
+  .middel {
+    padding-left: 1.5rem;
+  }
+  .reviws {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0.3rem auto;
+    align-items: flex-start;
+  }
+  .card-r {
+    width: 31%;
+    margin-top: 2rem;
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+  .card-r:first-child {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .card-r:last-child {
+    margin-top: 3.6rem;
+    margin-bottom: 0;
+    margin-right: 0;
+  }
+  .card-r > p {
+    line-height: 1.6;
+    font-weight: 400;
+  }
+}
