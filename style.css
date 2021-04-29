@@ -20,23 +20,16 @@ Dark Grayish Magenta: hsl(303, 10%, 53%)
 Light Grayish Magenta: hsl(300, 24%, 96%)
 White: hsl(0, 0%, 100%)*/
 body {
-  background-color: var(--color-n-white);
-  overflow-x: hidden;
+  background-image: url(images/bg-pattern-top-mobile.svg);
+  background-position: center top;
+  background-repeat: no-repeat;
 }
-.desktop {
-  display: none;
+main {
+  background-image: url(images/bg-pattern-bottom-mobile.svg);
+  background-position: center bottom;
+  background-repeat: no-repeat;
 }
-.mobile {
-  position: absolute;
-  z-index: -1;
-}
-.topm {
-  top: 0;
-  left: 0;
-}
-.bottomm {
-  bottom: 0;
-}
+
 header {
   color: var(--color-p-dark-magenta);
   font-weight: 700;
@@ -137,26 +130,25 @@ header > h2 {
   color: hsl(228, 45%, 44%);
 }
 @media only screen and (min-width: 400px) {
-  .mobile {
-    display: none;
+  body {
+    background-color: var(--color-n-white);
+    overflow-x: hidden;
+    background-image: url(images/bg-pattern-top-desktop.svg);
+    background-position: left top;
+    background-repeat: no-repeat;
   }
-  .desktop {
-    display: block;
-    z-index: -1;
-    position: absolute;
-  }
-  .topd {
-    top: -80px;
-    left: 0;
-  }
-  .bottomd {
-    bottom: 0;
+  main {
+    margin: 0;
+    padding: 0;
+    background-image: url(images/bg-pattern-bottom-desktop.svg);
+    background-position: bottom center;
+    background-repeat: no-repeat;
   }
   .con {
     display: flex;
     justify-content: space-between;
     width: 90%;
-    margin: 1rem auto 0;
+    margin: 2rem auto 0;
   }
   header {
     width: 38%;
